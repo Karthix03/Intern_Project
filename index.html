@@ -2,55 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Karthik's Frontend Engineer Portfolio">
-    <meta name="keywords" content="Frontend Engineer, Portfolio, HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Karthik Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Karthik K</h1>
-    <p>Frontend Engineer</p>
-     <button id="theme-toggle">🌙 Dark Mode</button>
+<div class="container">
+    <h1>To-Do List</h1>
 
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addBtn">Add</button>
+    </div>
 
-<main>
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
 
-<section aria-labelledby="hero">
-    <h2 id="hero">Welcome</h2>
-    <p>
-        Frontend Engineer passionate about building responsive,
-        accessible and user-friendly web applications.
-    </p>
-</section>
+    <ul id="taskList"></ul>
+</div>
 
-<section aria-labelledby="skills">
-    <h2 id="skills">Skills</h2>
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Responsive Design</li>
-    </ul>
-</section>
-
-</main>
-
-<footer>
-    <p>&copy; 2026 Karthik K</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
