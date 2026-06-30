@@ -1,97 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atmosphere | Real-Time Weather</title>
-    <meta name="description" content="A dynamic, real-time weather dashboard featuring glassmorphism design.">
-    <!-- Google Fonts -->
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌌</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Metadata -->
+    <title>AETHER Audio | Precision Sound & Luxury Design</title>
+    <meta name="description" content="AETHER Audio crafts premium audiophile equipment: mahogany open-back headphones, vacuum-tube amplifiers, customizable mechanical keyboards, and precision turntables." />
+    <meta name="keywords" content="audiophile, high-end audio, vacuum tube amplifier, custom mechanical keyboard, wood headphones, turntable, Hifi audio" />
+    <meta name="author" content="AETHER Audio Team" />
+    
+    <!-- Open Graph / Facebook / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AETHER Audio | Precision Sound & Luxury Design" />
+    <meta property="og:description" content="Experience high-fidelity sound coupled with artisan craftsmanship. Premium wood, brass, and copper finishes." />
+    <meta property="og:site_name" content="AETHER Audio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AETHER Audio | Precision Sound" />
+    <meta name="twitter:description" content="Handcrafted audiophile equipment for sound purists." />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Remix Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="app-container">
-        <header class="header glass-panel">
-            <h1><i class="ri-blaze-line logo-icon"></i> Atmosphere</h1>
-            <p>Live Weather Intelligence</p>
-        </header>
-
-        <main class="dashboard">
-            <section class="search-section glass-panel">
-                <form id="search-form" class="search-form">
-                    <div class="input-group">
-                        <i class="ri-map-pin-2-line search-icon"></i>
-                        <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off" required>
-                    </div>
-                    <button type="submit" class="search-btn" id="search-btn">
-                        <span>Search</span>
-                        <i class="ri-search-line"></i>
-                    </button>
-                </form>
-            </section>
-
-            <!-- Loading State -->
-            <div id="loader" class="loader hidden">
-                <div class="spinner"></div>
-                <p>Fetching atmosphere data...</p>
-            </div>
-
-            <!-- Error State -->
-            <div id="error-message" class="error-message glass-panel hidden">
-                <i class="ri-error-warning-line"></i>
-                <p id="error-text">Unable to find city.</p>
-            </div>
-
-            <!-- Weather Display Section -->
-            <section id="weather-display" class="weather-display hidden">
-                <div class="main-weather glass-panel">
-                    <div class="location-info">
-                        <h2 id="location-name">London, UK</h2>
-                        <p id="current-date">Monday, 27 Jun</p>
-                    </div>
-                    
-                    <div class="temperature-block">
-                        <div class="weather-icon-large" id="weather-icon">
-                            <i class="ri-sun-cloudy-line"></i>
-                        </div>
-                        <div class="temp-data">
-                            <h1 id="temperature">24<span class="unit">°C</span></h1>
-                            <p id="weather-description" class="weather-desc">Partly Cloudy</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="metrics-grid">
-                    <div class="metric-card glass-panel">
-                        <div class="metric-icon humidity-icon">
-                            <i class="ri-drop-line"></i>
-                        </div>
-                        <div class="metric-info">
-                            <p class="metric-label">Humidity</p>
-                            <h3 id="humidity" class="metric-value">45%</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="metric-card glass-panel">
-                        <div class="metric-icon wind-icon">
-                            <i class="ri-windy-line"></i>
-                        </div>
-                        <div class="metric-info">
-                            <p class="metric-label">Wind Speed</p>
-                            <h3 id="wind-speed" class="metric-value">12 km/h</h3>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- Custom JS -->
-    <script src="app.js"></script>
-</body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
